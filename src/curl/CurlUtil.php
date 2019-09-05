@@ -1,10 +1,9 @@
 <?php
 
-namespace Fc\Utils\Curl;
+namespace Fc\Utils;
 
-class Util
+class CurlUtil
 {
-
     public static function normalPost($url, $data = null, $headers = null)
     {
         return self::curl($url, $headers, 'POST', $data);

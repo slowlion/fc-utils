@@ -1,6 +1,6 @@
 <?php
 
-namespace Fc\FcUtils;
+namespace Fc\Utils\Curl;
 
 class CurlUtil
 {

@@ -12,7 +12,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Fc\\FcUtils\\": "src/"
+      "Fc\\Utils\\": "src/"
     }
   }
 }

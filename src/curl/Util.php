@@ -2,8 +2,29 @@
 
 namespace Fc\Utils\Curl;
 
-class CurlUtil
+class Util
 {
+
+    public static function normalPost($url, $data = null, $headers = null)
+    {
+        return self::curl($url, $headers, 'POST', $data);
+    }
+
+    public static function normalGet($url, $headers = null)
+    {
+        return self::curl($url, $headers);
+    }
+
+    public static function normalProxyGet($url, $headers = null)
+    {
+        return self::proxyCurl($url, $headers, 'GET');
+    }
+
+    public static function normalProxyPost($url, $data, $headers = null)
+    {
+        return self::proxyCurl($url, $headers, 'POST', $data);
+    }
+
     public static function post($url, $data = null, $headers = null)
     {
         return json_decode(self::curl($url, $headers, 'POST', $data));
